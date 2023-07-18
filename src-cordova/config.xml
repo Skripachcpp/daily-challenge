@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="daily.challenge" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>DailyChallenge</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+    <!-- this hook will point your config.xml to the DevServer on Serve -->
+    <hook type="after_prepare" src="../node_modules/vue-cli-plugin-cordova/serve-config-hook.js" />
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />
+
+    <plugin name="File" value="org.apache.cordova.FileUtils" />
+    <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
+
+    <platform name="android">
+        <uses-permission name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+        <uses-permission name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission name="android.permission.READ_EXTERNAL_STORAGE" />
+        <uses-permission name="android.permission.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION" />
+        <uses-permission name="android.permission.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION" />
+        
+    </platform>
+    
+</widget>
